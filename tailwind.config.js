@@ -9,6 +9,9 @@ module.exports = {
       fontSize: {
         40: "2.5rem",
       },
+      colors: {
+        defaultCheckbox: "rgba(227, 228, 241, 1)",
+      },
     },
   },
   plugins: [],
