@@ -1,8 +1,10 @@
+import React from "react";
+import MainHeader from "./Components/MainHeader";
 function App() {
   return (
-    <div>
-      <h1 className="text-red-700">Hello world!</h1>
-    </div>
+    <React.Fragment>
+      <MainHeader />
+    </React.Fragment>
   );
 }
 
