@@ -4,16 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@layer components {
+  #check-box-1:checked {
+    @apply bg-gradient-to-r from-gradientStart  to-gradientEnd;
+    @apply border-none;
+  }
+  #check-box-1:checked ~ #correction-mark1 {
+    @apply block;
+  }
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-} */
