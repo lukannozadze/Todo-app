@@ -5,11 +5,11 @@
 @tailwind utilities;
 
 @layer components {
-  #check-box-1:checked {
+  #check-box:checked {
     @apply bg-gradient-to-r from-gradientStart  to-gradientEnd;
     @apply border-none;
   }
-  #check-box-1:checked ~ #correction-mark1 {
+  #check-box:checked ~ #correction-mark1 {
     @apply block;
   }
 }

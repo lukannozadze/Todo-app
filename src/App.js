@@ -16,7 +16,7 @@ function App() {
     <React.Fragment>
       <MainHeader />
       <AddTodo onSaveListInformation={saveListInformationHandler} />
-      <TodoList data={listArr} />
+      <TodoList data={listArr} className="mt-[-55px]  z-3" />
     </React.Fragment>
   );
 }

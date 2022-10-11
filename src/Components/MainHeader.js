@@ -13,7 +13,7 @@ const MainHeader = () => {
         alt="beautiful white half moon"
       ></img>
       <img
-        className="bg-gradient-to-r from-purple-600  to-blue-500 relative "
+        className="bg-gradient-to-r from-purple-600  to-blue-500 z-2  relative "
         src={imgPath}
         alt="beautiful view of mountains"
       ></img>
