@@ -1,11 +1,6 @@
 import React from "react";
 import Checkbox from "../UI/Checkbox";
 const TodoList = (props) => {
-  // const taskCrossOutHandler = (e) =>{
-  // if(e.target.checked){
-
-  // }
-  // }
   return (
     <ul className={props.className}>
       {props.data.map((item) => (
@@ -16,11 +11,7 @@ const TodoList = (props) => {
           border-solid  border-b-2  border-gray-200 leading-[18px] bg-white relative  "
         >
           {item.listItem}
-          <Checkbox
-            // onClick={taskCrossOutHandler}
-            id="check-box"
-            className="appearance-none w-[24px] h-[24px] border-2 rounded-3xl cursor-pointer border-defaultCheckbox absolute top-[16px] left-[23px]"
-          />
+          <Checkbox id={item.id} className="absolute top-[16px] left-[23px]" />
         </li>
       ))}
       <li
