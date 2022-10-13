@@ -1,18 +1,10 @@
 import React from "react";
-import Checkbox from "../UI/Checkbox";
+import ListItem from "./ListItem";
 const TodoList = (props) => {
   return (
     <ul className={props.className}>
       {props.data.map((item) => (
-        <li
-          key={item.id}
-          className="mt-[10px] w-[540px] h-[64px] font-Josefin text-[18px] pl-[72px]
-           m-auto pt-[21px] pb-[24px] rounded-t-[5px]
-          border-solid  border-b-2  border-gray-200 leading-[18px] bg-white relative  "
-        >
-          {item.listItem}
-          <Checkbox id={item.id} className="absolute top-[16px] left-[23px]" />
-        </li>
+        <ListItem key={item.id} value={item} />
       ))}
       <li
         className="w-[540px] m-auto pt-[18px] pb-[20px] text-gray-500 pl-[24px] font-Josefin text-[14px]
