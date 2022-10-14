@@ -4,10 +4,21 @@ import AddTodo from "./Components/AddTodo";
 import TodoList from "./Components/TodoList";
 function App() {
   const [listArr, setListArr] = useState([]);
+
+  const copyListArr = listArr.slice();
+  let filteredArr = [];
+  const deleteTodo = (id) => {
+    filteredArr = copyListArr.filter((item) => {
+      return item.id !== id;
+    });
+    setListArr(filteredArr);
+  };
   const saveListInformationHandler = (data) => {
+    console.log(data);
     let listData = {
-      listItem: data,
-      id: Math.random().toString(),
+      listItem: data.listItem,
+      id: data.id,
+      status: data.status,
     };
     setListArr((prevState) => [...prevState, listData]);
   };
@@ -16,7 +27,11 @@ function App() {
     <React.Fragment>
       <MainHeader />
       <AddTodo onSaveListInformation={saveListInformationHandler} />
-      <TodoList data={listArr} className="mt-[-55px]  z-3" />
+      <TodoList
+        data={listArr}
+        className="mt-[-55px]  z-3"
+        onDeleteTodo={deleteTodo}
+      />
     </React.Fragment>
   );
 }

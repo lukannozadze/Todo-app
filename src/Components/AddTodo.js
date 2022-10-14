@@ -2,18 +2,26 @@ import React, { useState } from "react";
 import Checkbox from "../UI/Checkbox";
 const AddTodo = (props) => {
   const [currentItem, setCurrentItem] = useState("");
-
+  const [inputCheckboxStatus, setInputCheckboxStatus] = useState(false);
   const changeHandler = (e) => {
     setCurrentItem(e.target.value);
   };
+
   const onSaveListInformation = (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      props.onSaveListInformation(currentItem);
+      let data = {
+        listItem: currentItem,
+        id: Math.random().toString(),
+        status: inputCheckboxStatus,
+      };
+      props.onSaveListInformation(data);
       setCurrentItem("");
     }
   };
-
+  const checkboxChangeHandler = (e) => {
+    setInputCheckboxStatus(!inputCheckboxStatus);
+  };
   return (
     <form>
       <input
@@ -27,7 +35,8 @@ const AddTodo = (props) => {
       ></input>
       <Checkbox
         id="check-box"
-        className={"absolute top-[179.2px] left-[472px] "}
+        className={"absolute top-[179.2px] left-[472px]"}
+        onChange={checkboxChangeHandler}
       />
     </form>
   );

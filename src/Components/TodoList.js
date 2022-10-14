@@ -4,7 +4,11 @@ const TodoList = (props) => {
   return (
     <ul className={props.className}>
       {props.data.map((item) => (
-        <ListItem key={item.id} value={item} />
+        <ListItem
+          key={item.id}
+          value={item}
+          onDeleteTodo={props.onDeleteTodo}
+        />
       ))}
       <li
         className="w-[540px] m-auto pt-[18px] pb-[20px] text-gray-500 pl-[24px] font-Josefin text-[14px]
