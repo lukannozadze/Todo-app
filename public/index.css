@@ -555,7 +555,7 @@ video {
   display: block;
 }
 
-.listSelector:hover ~ .escapeSelector{
+.listSelector:hover .escapeSelector{
   opacity: 1;
 }
 

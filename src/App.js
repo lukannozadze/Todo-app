@@ -4,8 +4,12 @@ import AddTodo from "./Components/AddTodo";
 import TodoList from "./Components/TodoList";
 function App() {
   const [listArr, setListArr] = useState([]);
-
+  const [filterStatus, setFilterStatus] = useState("all");
   const copyListArr = listArr.slice();
+  let completed, active;
+  let listData = {};
+
+  //DELETE TODO
   let filteredArr = [];
   const deleteTodo = (id) => {
     filteredArr = copyListArr.filter((item) => {
@@ -13,13 +17,50 @@ function App() {
     });
     setListArr(filteredArr);
   };
+
+  //CHANGE STATUS WHEN CHECKBOX IS CHECKED
+
+  const changeStatus = (id) => {
+    copyListArr.forEach((item) => {
+      if (item.id === id) {
+        return (item.status = !item.status);
+      }
+    });
+  };
+
+  //////////////////FILTER/////////////////////
+  //FILTER AND RENDER ACTIVE LIST ITEMS
+  let activesArr = copyListArr.filter((item) => {
+    return !item.status;
+  });
+  active = activesArr;
+
+  const renderActives = () => {
+    setFilterStatus("active");
+  };
+  //FILTER AND RENDER COMPLETED LIST ITEMS
+  let completedArr = copyListArr.filter((item) => {
+    return item.status;
+  });
+  completed = completedArr;
+
+  const renderCompleted = () => {
+    setFilterStatus("completed");
+  };
+  //FILTER AND RENDER ALL LIST ITEMS
+
+  const renderAll = () => {
+    setFilterStatus("all");
+  };
+
+  //GENERATE AND UPDATE TODO LIST
   const saveListInformationHandler = (data) => {
-    console.log(data);
-    let listData = {
+    listData = {
       listItem: data.listItem,
       id: data.id,
       status: data.status,
     };
+
     setListArr((prevState) => [...prevState, listData]);
   };
 
@@ -28,9 +69,19 @@ function App() {
       <MainHeader />
       <AddTodo onSaveListInformation={saveListInformationHandler} />
       <TodoList
-        data={listArr}
+        data={
+          filterStatus === "all"
+            ? listArr
+            : filterStatus === "active"
+            ? active
+            : completed
+        }
         className="mt-[-55px]  z-3"
         onDeleteTodo={deleteTodo}
+        onChangeStatus={changeStatus}
+        onRenderActives={renderActives}
+        onRenderCompleted={renderCompleted}
+        onRenderAll={renderAll}
       />
     </React.Fragment>
   );

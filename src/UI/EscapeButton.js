@@ -6,7 +6,7 @@ const EscapeButton = (props) => {
       <img
         className={props.className}
         src={escapeIconPath}
-        alt="two crossing rectangles"
+        alt="two crossing lines"
         onClick={() => props.onDeleteTodo(props.id)}
       />
     </div>

@@ -6,22 +6,26 @@ const AddTodo = (props) => {
   const changeHandler = (e) => {
     setCurrentItem(e.target.value);
   };
-
+  let data = {};
   const onSaveListInformation = (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      let data = {
+      data = {
         listItem: currentItem,
         id: Math.random().toString(),
         status: inputCheckboxStatus,
       };
+
       props.onSaveListInformation(data);
       setCurrentItem("");
     }
   };
   const checkboxChangeHandler = (e) => {
     setInputCheckboxStatus(!inputCheckboxStatus);
+
+    console.log(inputCheckboxStatus);
   };
+
   return (
     <form>
       <input

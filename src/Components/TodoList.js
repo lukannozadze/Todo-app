@@ -8,6 +8,7 @@ const TodoList = (props) => {
           key={item.id}
           value={item}
           onDeleteTodo={props.onDeleteTodo}
+          onChangeStatus={props.onChangeStatus}
         />
       ))}
       <li
@@ -19,13 +20,22 @@ const TodoList = (props) => {
           {" "}
           {props.data.length} items left
         </span>
-        <span className="pl-[96px]  hover:text-blue-500 cursor-pointer">
+        <span
+          className="pl-[96px]  hover:text-blue-500 cursor-pointer"
+          onClick={props.onRenderAll}
+        >
           All
         </span>
-        <span className="pl-[19px] hover:text-blue-500 cursor-pointer">
+        <span
+          className="pl-[19px] hover:text-blue-500 cursor-pointer"
+          onClick={props.onRenderActives}
+        >
           Active{" "}
         </span>
-        <span className="pl-[19px] hover:text-blue-500 cursor-pointer">
+        <span
+          className="pl-[19px] hover:text-blue-500 cursor-pointer"
+          onClick={props.onRenderCompleted}
+        >
           Completed
         </span>
         <span className="pl-[56px] hover:text-blue-500 cursor-pointer">

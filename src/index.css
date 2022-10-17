@@ -8,4 +8,7 @@
   #check-box:checked ~ #correction-mark1 {
     @apply block;
   }
+  .listSelector:hover .escapeSelector {
+    @apply opacity-100;
+  }
 }
