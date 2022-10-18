@@ -14,7 +14,7 @@ const TodoList = (props) => {
       <li
         className="w-[540px] m-auto pt-[18px] pb-[20px] text-gray-500 pl-[24px] font-Josefin text-[14px]
        leading-[14px] border-solid rounded-b-[5px]
-        border-gray-200 bg-white"
+        border-gray-200 bg-white shadow-[0_35px_50px_-15px_rgba(194,195,214,0.5)]"
       >
         <span className=" hover:text-blue-500 cursor-pointer">
           {" "}
@@ -38,7 +38,10 @@ const TodoList = (props) => {
         >
           Completed
         </span>
-        <span className="pl-[56px] hover:text-blue-500 cursor-pointer">
+        <span
+          className="pl-[56px] hover:text-blue-500 cursor-pointer"
+          onClick={props.onDeleteCompleted}
+        >
           Clear Completed
         </span>
       </li>

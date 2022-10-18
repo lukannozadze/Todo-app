@@ -35,10 +35,15 @@ const ListItem = (props) => {
         ]}
       >
         <div className="flex">
-          {props.value.listItem}
+          <span className="text-gray-700">{props.value.listItem}</span>
           <Checkbox
             id={props.value.id}
-            className={`absolute top-[16px] left-[23px]`}
+            className={[
+              `absolute top-[16px] left-[23px]`,
+              props.value.status
+                ? `bg-gradient-to-r from-gradientStart  to-gradientEnd border-none absolute top-[16px] left-[23px]`
+                : `absolute top-[16px] left-[23px]`,
+            ]}
             onChange={checkboxChangeHandler}
           />
           <EscapeButton

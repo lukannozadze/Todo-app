@@ -17,7 +17,10 @@ function App() {
     });
     setListArr(filteredArr);
   };
-
+  //CLEAR COMPLETED ITEMS
+  const deleteCompleted = () => {
+    setListArr(active);
+  };
   //CHANGE STATUS WHEN CHECKBOX IS CHECKED
 
   const changeStatus = (id) => {
@@ -81,6 +84,7 @@ function App() {
         onChangeStatus={changeStatus}
         onRenderActives={renderActives}
         onRenderCompleted={renderCompleted}
+        onDeleteCompleted={deleteCompleted}
         onRenderAll={renderAll}
       />
     </React.Fragment>
