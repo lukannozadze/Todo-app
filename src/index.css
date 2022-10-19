@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 @layer components {
-  #check-box:checked ~ #correction-mark1 {
+  .checkbox:checked ~ #correction-mark1 {
     @apply block;
   }
   .listSelector:hover .escapeSelector {

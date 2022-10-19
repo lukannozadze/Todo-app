@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import MainHeader from "./Components/MainHeader";
 import AddTodo from "./Components/AddTodo";
 import TodoList from "./Components/TodoList";
+import useDarkMode from "./UI/useDarkMode";
 function App() {
+  useDarkMode();
   const [listArr, setListArr] = useState([]);
   const [filterStatus, setFilterStatus] = useState("all");
   const copyListArr = listArr.slice();
@@ -70,23 +72,25 @@ function App() {
   return (
     <React.Fragment>
       <MainHeader />
-      <AddTodo onSaveListInformation={saveListInformationHandler} />
-      <TodoList
-        data={
-          filterStatus === "all"
-            ? listArr
-            : filterStatus === "active"
-            ? active
-            : completed
-        }
-        className="mt-[-55px]  z-3"
-        onDeleteTodo={deleteTodo}
-        onChangeStatus={changeStatus}
-        onRenderActives={renderActives}
-        onRenderCompleted={renderCompleted}
-        onDeleteCompleted={deleteCompleted}
-        onRenderAll={renderAll}
-      />
+      <div className="h-screen dark:bg-black">
+        <AddTodo onSaveListInformation={saveListInformationHandler} />
+        <TodoList
+          data={
+            filterStatus === "all"
+              ? listArr
+              : filterStatus === "active"
+              ? active
+              : completed
+          }
+          className="mt-[-55px]  z-3"
+          onDeleteTodo={deleteTodo}
+          onChangeStatus={changeStatus}
+          onRenderActives={renderActives}
+          onRenderCompleted={renderCompleted}
+          onDeleteCompleted={deleteCompleted}
+          onRenderAll={renderAll}
+        />
+      </div>
     </React.Fragment>
   );
 }
