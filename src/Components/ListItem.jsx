@@ -23,17 +23,19 @@ const ListItem = (props) => {
           !checked
             ? ` w-[540px] h-[64px] font-Josefin text-[18px] pl-[72px]
            m-auto pt-[21px] pb-[24px] rounded-t-[5px]
-           border-solid  border-b-2  border-gray-200 leading-[18px] bg-white dark:bg-[#25273d] dark:border-[#393a4b] dark:text-[#c8cbe7] relative `
+           border-solid  border-b-2  border-gray-200 leading-[18px] bg-white dark:bg-[#25273d] dark:border-[#393a4b] dark:text-[#c8cbe7] dark:rounded-t-[0px] relative `
             : ` w-[540px] h-[64px] font-Josefin text-[18px] pl-[72px]
            m-auto pt-[21px] pb-[24px] rounded-t-[5px]
-           border-solid  border-b-2  border-gray-200 leading-[18px] bg-white text-gray-400 line-through dark:bg-[#25273d] dark:border-[#393a4b] dark:text-[#4d5067] relative`,
+           border-solid  border-b-2  border-gray-200 leading-[18px] bg-white text-gray-400 line-through dark:bg-[#25273d] dark:border-[#393a4b] dark:text-[#4d5067]
+            dark:rounded-t-[0px] relative`,
           !props.value.status
             ? ` w-[540px] h-[64px] font-Josefin text-[18px] pl-[72px]
            m-auto pt-[21px] pb-[24px] rounded-t-[5px]
-           border-solid  border-b-2  border-gray-200 leading-[18px] bg-white dark:bg-[#25273d] dark:border-[#393a4b] dark:text-[#c8cbe7] relative`
+           border-solid  border-b-2  border-gray-200 leading-[18px] bg-white dark:bg-[#25273d] dark:border-[#393a4b] dark:text-[#c8cbe7] dark:rounded-t-[0px] relative`
             : ` w-[540px] h-[64px] font-Josefin text-[18px] pl-[72px]
            m-auto pt-[21px] pb-[24px] rounded-t-[5px]
-           border-solid  border-b-2  border-gray-200 leading-[18px] bg-white dark:bg-[#25273d] dark:border-[#393a4b] text-gray-400 line-through dark:text-[#4d5067] relative`,
+           border-solid  border-b-2  border-gray-200 leading-[18px] bg-white dark:bg-[#25273d] dark:border-[#393a4b] text-gray-400 line-through dark:text-[#4d5067]
+            dark:rounded-t-[0px] relative`,
         ]}
       >
         <div className="flex">
