@@ -4,6 +4,9 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      screens: {
+        xlg: "1920px",
+      },
       fontFamily: {
         Josefin: "Josefin Sans",
       },

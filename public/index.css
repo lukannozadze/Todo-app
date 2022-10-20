@@ -868,6 +868,11 @@ video {
   outline-offset: 2px;
 }
 
+.active\:text-\[\#494c6b\]:active{
+  --tw-text-opacity: 1;
+  color: rgb(73 76 107 / var(--tw-text-opacity));
+}
+
 .dark .dark\:border-\[\#393a4b\]{
   --tw-border-opacity: 1;
   border-color: rgb(57 58 75 / var(--tw-border-opacity));
@@ -897,4 +902,16 @@ video {
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.dark .dark\:active\:text-\[\#e3e4f1\]:active{
+  --tw-text-opacity: 1;
+  color: rgb(227 228 241 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1920px){
+  .xlg\:text-red-500{
+    --tw-text-opacity: 1;
+    color: rgb(239 68 68 / var(--tw-text-opacity));
+  }
 }
