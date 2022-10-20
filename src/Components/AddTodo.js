@@ -39,7 +39,9 @@ const AddTodo = (props) => {
       ></input>
       <Checkbox
         id="check-box"
-        className={"absolute top-[179.2px] left-[472px] xlg:left-[705px]"}
+        className={
+          "absolute top-[179.2px] left-[472px] xlg:left-[705px] 2xl:left-[520px]"
+        }
         onChange={checkboxChangeHandler}
       />
     </form>
