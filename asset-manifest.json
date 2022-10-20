@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/http//luka-nozadze.github.io/Todo-app/static/css/main.b7bc8ae8.css",
-    "main.js": "/http//luka-nozadze.github.io/Todo-app/static/js/main.cc218407.js",
-    "static/media/light-desktop-image.png": "/http//luka-nozadze.github.io/Todo-app/static/media/light-desktop-image.ea4ab885d2ca5ab60e02.png",
-    "static/media/dark-desktop-image.png": "/http//luka-nozadze.github.io/Todo-app/static/media/dark-desktop-image.0713646f2d90feddd9ed.png",
-    "index.html": "/http//luka-nozadze.github.io/Todo-app/index.html",
-    "main.b7bc8ae8.css.map": "/http//luka-nozadze.github.io/Todo-app/static/css/main.b7bc8ae8.css.map",
-    "main.cc218407.js.map": "/http//luka-nozadze.github.io/Todo-app/static/js/main.cc218407.js.map"
+    "main.css": "/Todo-app/static/css/main.b7bc8ae8.css",
+    "main.js": "/Todo-app/static/js/main.e02bbc19.js",
+    "static/media/light-desktop-image.png": "/Todo-app/static/media/light-desktop-image.ea4ab885d2ca5ab60e02.png",
+    "static/media/dark-desktop-image.png": "/Todo-app/static/media/dark-desktop-image.0713646f2d90feddd9ed.png",
+    "index.html": "/Todo-app/index.html",
+    "main.b7bc8ae8.css.map": "/Todo-app/static/css/main.b7bc8ae8.css.map",
+    "main.e02bbc19.js.map": "/Todo-app/static/js/main.e02bbc19.js.map"
   },
   "entrypoints": [
     "static/css/main.b7bc8ae8.css",
-    "static/js/main.cc218407.js"
+    "static/js/main.e02bbc19.js"
   ]
 }
